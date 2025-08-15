@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forms in HTML</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #a8e6cf, #dcedc1, #ffd3b6);
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+        color: #333;
+    }
+    .form-container {
+        max-width: 600px;
+        margin: 30px auto;
+        background-color: #ffffffcc;
+        border-radius: 10px;
+        padding: 20px 30px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        border: 3px solid #2196f3;
+    }
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 15px;
+        color: #333;
+    }
+    input, textarea, select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+    input:focus, textarea:focus, select:focus {
+        border-color: #2196f3;
+        box-shadow: 0 0 5px #2196f3;
+        outline: none;
+    }
+    textarea {
+        resize: none;
+        height: 100px;
+    }
+    .range-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    input[type="color"] {
+        height: 40px;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+    }
+    input[type="range"] {
+        flex: 1;
+    }
+    .btn-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    button {
+        background-color: #2196f3;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.3s;
+    }
+    button:hover {
+        background-color: #1976d2;
+    }
+    .reset-btn {
+        background-color: #f44336;
+    }
+    .reset-btn:hover {
+        background-color: #c62828;
+    }
+</style>
+</head>
+<body>
+
+<div class="form-container">
+    <form>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
+
+        <label for="email">Mail Id</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+        <label for="month">Month</label>
+        <input type="month" id="month" name="month">
+
+        <label for="week">Week</label>
+        <input type="week" id="week" name="week">
+
+        <label for="color">Color</label>
+        <input type="color" id="color" name="color">
+
+        <label for="range">Range</label>
+        <div class="range-container">
+            <input type="range" id="range" name="range" min="0" max="100">
+        </div>
+
+        <div class="btn-container">
+            <button type="submit">SUBMIT</button>
+            <button type="reset" class="reset-btn">RESET</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
