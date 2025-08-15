@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table in HTML</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #f0f9ff, #cbebff);
+        margin: 0;
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    table {
+        width: 80%;
+        margin: auto;
+        border-collapse: collapse;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    th, td {
+        border: 1px solid #ccc;
+        padding: 12px;
+        text-align: center;
+    }
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+    th[colspan] {
+        background-color: #FFF000;
+    }
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    tr:hover {
+        background-color: #e3f2fd;
+        transition: 0.3s;
+    }
+</style>
+</head>
+<body>
+
+<h1>Employee Table</h1>
+<table>
+    <tr>
+        <th rowspan="2">S.No</th>
+        <th colspan="2">Name</th>
+        <th rowspan="2">Department</th>
+        <th rowspan="2">Marks</th>
+    </tr>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>Doe</td>
+        <td>IT</td>
+        <td>85</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Jane</td>
+        <td>Smith</td>
+        <td>HR</td>
+        <td>90</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Michael</td>
+        <td>Brown</td>
+        <td>Finance</td>
+        <td>88</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Emily</td>
+        <td>Clark</td>
+        <td>Finance</td>
+        <td>92</td>
+    </tr>
+</table>
+
+</body>
+</html>
